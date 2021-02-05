@@ -1,0 +1,8 @@
+<input type="text" name="todo" [(ngModel)]="todo">
+<button (click)="add()">Add</button>
+
+<ul>
+  <li *ngFor="let item of todos">
+  <app-todo (deleteTodo)="deleteTodo($event)" [todo]="item"></app-todo>
+  </li>
+</ul>
